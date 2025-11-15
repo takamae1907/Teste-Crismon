@@ -15,17 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3. Se o produto não existir, volta para a loja
     if (!produto) {
         console.error("Produto não encontrado!");
-        // (Opcional: redirecionar)
-        // window.location.href = "loja.html"; 
         
-        // Esconde o container principal e mostra o erro
         const container = document.querySelector(".pdp-layout");
-        const errorContainer = document.getElementById("pdp-error-container"); // Supondo que você tenha um (bom ter)
         
         if (container) container.style.display = 'none';
         
-        // Simulação de um container de erro (caso não exista no HTML)
-        if (!errorContainer && container) {
+        // Simulação de um container de erro
+        if (container) {
             const erro = document.createElement('div');
             erro.innerHTML = `
                 <div style="text-align: center; padding: 4rem 1rem;">
@@ -60,8 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Link do Botão WhatsApp (Pedido direto)
     const whatsappButton = document.getElementById("pdp-whatsapp-button");
-    const whatsappLink = "https://chat.whatsapp.com/BS9jxBn1V2eIzFxjMFlxXG?fbclid=PAZXh0bgNhZW0CMTEAAadpgJFJx9NshdqBFCB9NrVhL5M68yZynr7unGsOEl4Qdg7ms3brQYLnPpvg5Q_aem_YoHqPQW_SD-3Awi7FhzB1Q";
-    whatsappButton.href = whatsappLink;
+    
+    // <-- MUDANÇA: Removida a definição de link estático
+    // const whatsappLink = "https://chat.whatsapp.com/BS9jxBn1V2eIzFxjMFlxXG?fbclid=...";
+    // whatsappButton.href = whatsappLink;
 
     // Imagem Principal (carrega a primeira foto)
     const mainImage = document.getElementById("pdp-gallery-main");
@@ -138,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // **NOVO: Clique nas Cores**
+    // Clique nas Cores
     const colorSwatches = document.querySelectorAll(".pdp-color-swatch");
     colorSwatches.forEach(swatch => {
         swatch.addEventListener("click", () => {
@@ -150,8 +148,58 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // <-- NOVO: Funções para o Pedido Direto no WhatsApp -->
 
-    // **NOVO: Clique no botão "Adicionar à Sacola"**
+    /**
+     * Retorna a saudação correta (Bom dia, Boa tarde, Boa noite).
+     */
+    function getGreeting() {
+        const hour = new Date().getHours();
+        if (hour >= 5 && hour < 12) return "Bom dia";
+        if (hour >= 12 && hour < 18) return "Boa tarde";
+        return "Boa noite";
+    }
+
+    /**
+     * Manipula o clique no botão "Pedir no WhatsApp"
+     */
+    function handleDirectWhatsAppOrder(e) {
+        e.preventDefault(); // Impede o link de navegar
+
+        // 1. Validação (igual ao da sacola)
+        if (!selectedSize) {
+            alert("Por favor, selecione um tamanho.");
+            return;
+        }
+        if (!selectedColorName) {
+            alert("Por favor, selecione uma cor.");
+            return;
+        }
+        
+        // 2. Número (pegar do bag-script, mas por segurança vamos definir aqui também)
+        const numeroWhatsapp = "5561995519612";
+
+        // 3. Montar a mensagem
+        let message = `Olá, ${getGreeting()}! Tenho interesse neste produto:\n\n`;
+        message += `*${produto.nome}* (Cód: ${productId})\n`;
+        message += `Preço: ${produto.preco}\n`;
+        message += `Tamanho: ${selectedSize}\n`;
+        message += `Cor: ${selectedColorName}\n\n`;
+        message += `Aguardo seu retorno para finalizar o pedido!`;
+
+        // 4. Codificar e abrir o link
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappURL = `https://wa.me/${numeroWhatsapp}?text=${encodedMessage}`;
+        window.open(whatsappURL, "_blank");
+    }
+
+    // <-- MUDANÇA: Adiciona o listener de clique ao botão do WhatsApp -->
+    if (whatsappButton) {
+        whatsappButton.addEventListener('click', handleDirectWhatsAppOrder);
+    }
+
+
+    // Clique no botão "Adicionar à Sacola"
     const addToBagButton = document.getElementById("pdp-add-to-bag-button");
     if (addToBagButton) {
         addToBagButton.addEventListener("click", () => {

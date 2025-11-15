@@ -140,10 +140,8 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        if (NUMERO_WHATSAPP_DONA === "5561995519612" || NUMERO_WHATSAPP_DONA === "5561995519612") {
-            alert("Erro: O número de WhatsApp da loja não foi configurado no arquivo 'bag-script.js'.");
-            return;
-        }
+        // <-- CORREÇÃO: Removida a verificação que impedia o script de rodar com seu número
+        // if (NUMERO_WHATSAPP_DONA === "5561995519612" || ... ) { ... }
 
         let message = `Olá, ${getGreeting()}! Tenho interesse nos seguintes produtos:\n\n`;
         
@@ -162,7 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const encodedMessage = encodeURIComponent(message);
         
         // Abre o link do WhatsApp
-        const whatsappURL = `https://wa.me/${+5561995519612}?text=${encodedMessage}`;
+        // <-- CORREÇÃO: Usando a variável NUMERO_WHATSAPP_DONA em vez de um número fixo
+        const whatsappURL = `https://wa.me/${NUMERO_WHATSAPP_DONA}?text=${encodedMessage}`;
         window.open(whatsappURL, "_blank");
     }
 
