@@ -3,7 +3,7 @@
 /* =================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     // 1. Encontrar o ID do produto na URL
     const params = new URLSearchParams(window.location.search);
     const productId = params.get('id');
@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3. Se o produto não existir, volta para a loja
     if (!produto) {
         console.error("Produto não encontrado!");
-        
+
         const container = document.querySelector(".pdp-layout");
-        
+
         if (container) container.style.display = 'none';
-        
+
         // Simulação de um container de erro
         if (container) {
             const erro = document.createElement('div');
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>`;
             container.parentElement.appendChild(erro);
         }
-        
+
         return;
     }
 
@@ -44,19 +44,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // 4. Preencher as informações na página
-    
+
     // Título e Código
     document.title = `${produto.nome} - Crismon Modas`;
     document.getElementById("pdp-label-codigo").innerText = `Cód. ${productId}`;
     document.getElementById("pdp-title").innerText = produto.nome;
-    
+
     // Preço
     document.getElementById("pdp-price").innerText = produto.preco;
     document.getElementById("pdp-installments").innerText = produto.parcelas;
 
     // Link do Botão WhatsApp (Pedido direto)
     const whatsappButton = document.getElementById("pdp-whatsapp-button");
-    
+
     // <-- MUDANÇA: Removida a definição de link estático
     // const whatsappLink = "https://chat.whatsapp.com/BS9jxBn1V2eIzFxjMFlxXG?fbclid=...";
     // whatsappButton.href = whatsappLink;
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Galeria de Miniaturas
     const thumbnailsContainer = document.getElementById("pdp-gallery-thumbnails");
     thumbnailsContainer.innerHTML = produto.fotos.map((foto, index) => {
-        const activeClass = (index === 0) ? 'active' : ''; 
+        const activeClass = (index === 0) ? 'active' : '';
         return `
             <div class="pdp-gallery-thumbnail-item ${activeClass}" 
                  style="background-image: url('${foto}')"
@@ -91,17 +91,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Cores
     const colorsContainer = document.getElementById("pdp-colors");
-    const corNomes = produto.corNomes || []; 
+    const corNomes = produto.corNomes || [];
     colorsContainer.innerHTML = produto.cores.map((cor, index) => {
-        const nomeCor = corNomes[index] || 'Cor'; 
-        
+        const nomeCor = corNomes[index] || 'Cor';
+
         // Se só tiver uma cor, já deixa pré-selecionada
         const activeClass = (produto.cores.length === 1) ? 'active' : '';
         if (produto.cores.length === 1) {
             selectedColor = cor;
             selectedColorName = nomeCor;
         }
-        
+
         return `
             <div class="pdp-color-swatch ${activeClass}" 
                  style="background-color: ${cor}"
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // 5. Adicionar Interatividade
-    
+
     // Clique nas Miniaturas
     const thumbnails = document.querySelectorAll(".pdp-gallery-thumbnail-item");
     thumbnails.forEach(thumb => {
@@ -175,9 +175,10 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Por favor, selecione uma cor.");
             return;
         }
-        
+
         // 2. Número (pegar do bag-script, mas por segurança vamos definir aqui também)
-        const numeroWhatsapp = "5561995519612";
+        // 2. Número (pegar do bag-script, mas por segurança vamos definir aqui também)
+        const numeroWhatsapp = "5561994134559";
 
         // 3. Montar a mensagem
         let message = `Olá, ${getGreeting()}! Tenho interesse neste produto:\n\n`;
@@ -203,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const addToBagButton = document.getElementById("pdp-add-to-bag-button");
     if (addToBagButton) {
         addToBagButton.addEventListener("click", () => {
-            
+
             // 1. Validação
             if (!selectedSize) {
                 alert("Por favor, selecione um tamanho.");
@@ -221,9 +222,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 preco: produto.preco,
                 foto: produto.fotos[0], // Pega a primeira foto como miniatura
                 tamanho: selectedSize,
-                cor: selectedColorName 
+                cor: selectedColorName
             };
-            
+
             // 3. Adiciona à sacola (a função está no bag-script.js)
             if (window.addToBag) {
                 window.addToBag(productToAdd);
