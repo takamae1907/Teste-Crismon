@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja - Crismon Modas</title>
-    <link rel="icon" href="Fotos/favicon.png" type="image/png"> <link rel="stylesheet" href="loja-style.css">
+    <link rel="icon" href="Fotos/favicon.png" type="image/png">
+    <link rel="stylesheet" href="loja-style.css">
     <link rel="icon" href="Fotos/logo-removebg-preview.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -18,9 +19,9 @@
             <h3>Refinar Busca</h3>
             <button class="sub-filter-close-btn" id="sub-filter-close-btn">&times;</button>
         </div>
-        
+
         <div class="sub-filter-body">
-            
+
             <div class="sub-filter-group">
                 <h4 class="sub-filter-title">Filtrar por Cor</h4>
                 <div class="sub-filter-options-color" id="color-filter-container">
@@ -58,12 +59,12 @@
                     <label class="sub-filter-label">
                         <input type="checkbox" class="sub-filter-checkbox" value="plus"> Plus Size
                     </label>
-                     <label class="sub-filter-label">
+                    <label class="sub-filter-label">
                         <input type="checkbox" class="sub-filter-checkbox" value="manga-longa"> Manga Longa
                     </label>
                 </div>
             </div>
-            
+
             <div class="sub-filter-group">
                 <h4 class="sub-filter-title">Tipo de Vestido</h4>
                 <div class="sub-filter-options">
@@ -72,7 +73,7 @@
                     </label>
                 </div>
             </div>
-            
+
         </div>
     </nav>
     <header class="card-nav-container">
@@ -92,6 +93,11 @@
                 </div>
 
                 <div class="nav-icons">
+                    
+                    <button class="nav-icon-btn" id="bag-icon-button" aria-label="Abrir sacola">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span id="bag-item-count" class="bag-item-count">0</span>
+                    </button>
                     <a href="https://chat.whatsapp.com/BS9jxBn1V2eIzFxjMFlxXG?fbclid=PAZXh0bgNhZW0CMTEAAadpgJFJx9NshdqBFCB9NrVhL5M68yZynr7unGsOEl4Qdg7ms3brQYLnPpvg5Q_aem_YoHqPQW_SD-3Awi7FhzB1Q" target="_blank" class="liquid-button-whatsapp">
                         <i class="fab fa-whatsapp"></i>
                         <span>Fale Conosco</span>
@@ -103,7 +109,7 @@
                 <div class="nav-card" style="background-color: var(--color-light-pink); color: var(--color-text-dark);">
                     <div class="nav-card-label">Navegação</div>
                     <div class="nav-card-links">
-                         <a class="nav-card-link" href="index.html">
+                        <a class="nav-card-link" href="index.html">
                             <i class="fas fa-arrow-right nav-card-link-icon"></i> Início
                         </a>
                         <a class="nav-card-link" href="index.html#colecao">
@@ -126,10 +132,10 @@
                     </div>
                 </div>
                 <div class="nav-card" style="background-color: var(--color-text-dark); color: var(--color-white);">
-                    <div class="nav-card-label">Contato</div>
+                    <div class="nav-card-label">Loja</div>
                     <div class="nav-card-links">
-                        <a class="nav-card-link" href="index.html#contato">
-                            <i class="fas fa-arrow-right nav-card-link-icon"></i> Fale Conosco
+                        <a class="nav-card-link" href="index.html#categorias">
+                            <i class="fas fa-arrow-right nav-card-link-icon"></i> Categorias
                         </a>
                     </div>
                 </div>
@@ -139,7 +145,7 @@
 
     <main>
         <section id="loja" class="product-grid-section">
-            
+
             <div class="loja-header">
                 <h2>Nossa Loja</h2>
 
@@ -164,581 +170,1028 @@
 
             <div class="product-grid" id="product-grid">
 
-            
                 <div class="product-card" data-category="destaques saias plus longa" data-color-names="preto marrom azul branco">
-                    <a href="produto.html?id=S001" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaPlus1.jpg');"></div></a>
+                    <a href="produto.html?id=S001" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaPlus1.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S001</span>
                         <h3><a href="produto.html?id=S001" class="product-card-link">Saia Midi Plus Size Listrada</a></h3>
                         <p class="product-price">R$ 135,00</p>
                         <p class="product-installments">em até 3x de R$ 45,00</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S001" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="saias plus longa" data-color-names="preto vermelho laranja bege">
-                    <a href="produto.html?id=S002" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaMidi17.jpg');"></div></a>
+                    <a href="produto.html?id=S002" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaMidi17.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S002</span>
                         <h3><a href="produto.html?id=S002" class="product-card-link">Saia Midi Plus com Botões</a></h3>
                         <p class="product-price">R$ 135,00</p>
                         <p class="product-installments">em até 3x de R$ 45,00</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S002" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="destaques saias mid longa" data-color-names="verde vermelho marrom cinza">
-                    <a href="produto.html?id=S003" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaMidi10.jpg');"></div></a>
+                    <a href="produto.html?id=S003" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaMidi10.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S003</span>
                         <h3><a href="produto.html?id=S003" class="product-card-link">Saia Midi com Cinto Redondo</a></h3>
                         <p class="product-price">R$ 125,00</p>
                         <p class="product-installments">em até 3x de R$ 41,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S003" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="saias mid longa" data-color-names="laranja marrom bege azul">
-                    <a href="produto.html?id=S004" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaMidi1.jpg');"></div></a>
+                    <a href="produto.html?id=S004" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaMidi1.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S004</span>
                         <h3><a href="produto.html?id=S004" class="product-card-link">Saia Midi com Cinto Fino</a></h3>
                         <p class="product-price">R$ 125,00</p>
                         <p class="product-installments">em até 3x de R$ 41,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S004" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="saias mid longa" data-color-names="bege">
-                    <a href="produto.html?id=S005" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaMidi18.jpg');"></div></a>
+                    <a href="produto.html?id=S005" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaMidi18.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S005</span>
                         <h3><a href="produto.html?id=S005" class="product-card-link">Saia Midi com Amarração</a></h3>
                         <p class="product-price">R$ 125,00</p>
                         <p class="product-installments">em até 3x de R$ 41,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S005" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="saias plus longa" data-color-names="vermelho laranja azul">
-                    <a href="produto.html?id=S006" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaMidi20.jpg');"></div></a>
+                    <a href="produto.html?id=S006" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaMidi20.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S006</span>
                         <h3><a href="produto.html?id=S006" class="product-card-link">Saia Midi Plus Lisa</a></h3>
                         <p class="product-price">R$ 135,00</p>
                         <p class="product-installments">em até 3x de R$ 45,00</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S006" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
                 <div class="product-card" data-category="destaques saias longa" data-color-names="branco bege rosa marrom preto">
-                    <a href="produto.html?id=S007" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaTule8.jpg');"></div></a>
+                    <a href="produto.html?id=S007" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaTule8.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S007</span>
                         <h3><a href="produto.html?id=S007" class="product-card-link">Saia Tule Bordado Floral 3D</a></h3>
                         <p class="product-price">R$ 80,00</p>
                         <p class="product-installments">em até 3x de R$ 26,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S007" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="saias longa" data-color-names="branco bege rosa bege preto">
-                    <a href="produto.html?id=S008" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaTule9.jpg');"></div></a>
+                    <a href="produto.html?id=S008" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaTule9.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S008</span>
                         <h3><a href="produto.html?id=S008" class="product-card-link">Saia Tule com Pérolas</a></h3>
                         <p class="product-price">R$ 79,90</p>
                         <p class="product-installments">em até 3x de R$ 26,63</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S008" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="saias longa" data-color-names="preto branco azul bege marrom">
-                    <a href="produto.html?id=S009" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaTule10.jpg');"></div></a>
+                    <a href="produto.html?id=S009" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaTule10.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S009</span>
                         <h3><a href="produto.html?id=S009" class="product-card-link">Saia Tule Plissada Lisa</a></h3>
                         <p class="product-price">R$ 69,90</p>
                         <p class="product-installments">em até 3x de R$ 23,30</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S009" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="saias longa" data-color-names="bege marrom preto">
-                    <a href="produto.html?id=S010" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaTule7.jpg');"></div></a>
+                    <a href="produto.html?id=S010" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaTule7.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S010</span>
                         <h3><a href="produto.html?id=S010" class="product-card-link">Saia Tule com Lantejoulas</a></h3>
                         <p class="product-price">R$ 85,00</p>
                         <p class="product-installments">em até 3x de R$ 28,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S010" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="saias longa" data-color-names="cinza vermelho">
-                    <a href="produto.html?id=S011" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/SaiaTule6.jpg');"></div></a>
+                    <a href="produto.html?id=S011" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/SaiaTule6.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód S011</span>
                         <h3><a href="produto.html?id=S011" class="product-card-link">Saia Tule Longa Camadas</a></h3>
                         <p class="product-price">R$ 110,00</p>
                         <p class="product-installments">em até 3x de R$ 36,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=S011" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="destaques blusas" data-color-names="rosa verde laranja azul marrom">
-                    <a href="produto.html?id=B001" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/blusa1.jpg');"></div></a>
+                    <a href="produto.html?id=B001" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/blusa1.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B001</span>
                         <h3><a href="produto.html?id=B001" class="product-card-link">Blusa Crepe com Abertura</a></h3>
                         <p class="product-price">R$ 49,90</p>
                         <p class="product-installments">em até 3x de R$ 16,63</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B001" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas" data-color-names="branco preto bege azul amarelo verde">
-                    <a href="produto.html?id=B002" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Blusa8.jpg');"></div></a>
+                    <a href="produto.html?id=B002" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Blusa8.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B002</span>
                         <h3><a href="produto.html?id=B002" class="product-card-link">Blusa Polo com Lenço</a></h3>
                         <p class="product-price">R$ 75,00</p>
                         <p class="product-installments">em até 3x de R$ 25,00</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B002" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas plus" data-color-names="rosa branco marrom azul bege">
-                    <a href="produto.html?id=B003" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/BlusaPlus.jpg');"></div></a>
+                    <a href="produto.html?id=B003" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/BlusaPlus.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B003</span>
                         <h3><a href="produto.html?id=B003" class="product-card-link">Blusa Plus com Renda</a></h3>
                         <p class="product-price">R$ 84,00</p>
                         <p class="product-installments">em até 3x de R$ 28,00</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B003" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas" data-color-names="rosa azul verde preto marrom">
-                    <a href="produto.html?id=B004" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/BlusaListrada.jpg');"></div></a>
+                    <a href="produto.html?id=B004" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/BlusaListrada.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B004</span>
                         <h3><a href="produto.html?id=B004" class="product-card-link">Blusa Listrada Canelada</a></h3>
                         <p class="product-price">R$ 69,90</p>
                         <p class="product-installments">em até 3x de R$ 23,30</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B004" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas manga-longa" data-color-names="branco preto bege azul">
-                    <a href="produto.html?id=B005" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/BlusaBolinha.jpg');"></div></a>
+                    <a href="produto.html?id=B005" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/BlusaBolinha.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B005</span>
                         <h3><a href="produto.html?id=B005" class="product-card-link">Blusa Poá Manga Longa</a></h3>
-                        <p class="product-price">R$ 75,00</p>
-                        <p class="product-installments">em até 3x de R$ 25,00</p>
+                        <p class="product-price">R$ 99,90</p>
+                        <p class="product-installments">em até 3x de R$ 33,30</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B005" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas" data-color-names="amarelo branco azul verde preto bege marrom">
-                    <a href="produto.html?id=B006" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Blusa75.jpg');"></div></a>
+                    <a href="produto.html?id=B006" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Blusa75.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B006</span>
                         <h3><a href="produto.html?id=B006" class="product-card-link">Blusa T-Shirt Bordada</a></h3>
                         <p class="product-price">R$ 75,00</p>
                         <p class="product-installments">em até 3x de R$ 25,00</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B006" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas" data-color-names="branco verde preto bege amarelo azul">
-                    <a href="produto.html?id=B007" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Blusa79.jpg');"></div></a>
+                    <a href="produto.html?id=B007" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Blusa79.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B007</span>
                         <h3><a href="produto.html?id=B007" class="product-card-link">Blusa T-Shirt Bordado Étnico</a></h3>
                         <p class="product-price">R$ 79,00</p>
                         <p class="product-installments">em até 3x de R$ 26,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B007" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas" data-color-names="branco marrom amarelo azul preto rosa verde">
-                    <a href="produto.html?id=B008" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Blusa79-1.jpg');"></div></a>
+                    <a href="produto.html?id=B008" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Blusa79-1.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B008</span>
                         <h3><a href="produto.html?id=B008" class="product-card-link">Blusa T-Shirt Renda Manga</a></h3>
                         <p class="product-price">R$ 79,00</p>
                         <p class="product-installments">em até 3x de R$ 26,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B008" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas plus" data-color-names="marrom azul verde branco bege preto">
-                    <a href="produto.html?id=B009" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Blusa79-2.jpg');"></div></a>
+                    <a href="produto.html?id=B009" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Blusa79-2.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B009</span>
                         <h3><a href="produto.html?id=B009" class="product-card-link">T-Shirt Plus Bordado Manga</a></h3>
                         <p class="product-price">R$ 79,00</p>
                         <p class="product-installments">em até 3x de R$ 26,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B009" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas" data-color-names="branco amarelo azul rosa verde">
-                    <a href="produto.html?id=B010" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Blusa95.jpg');"></div></a>
+                    <a href="produto.html?id=B010" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Blusa95.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B010</span>
                         <h3><a href="produto.html?id=B010" class="product-card-link">Blusa Lese com Forro</a></h3>
                         <p class="product-price">R$ 95,00</p>
                         <p class="product-installments">em até 3x de R$ 31,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B010" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas" data-color-names="branco bege verde rosa azul marrom">
-                    <a href="produto.html?id=B011" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Blusa89.jpg');"></div></a>
+                    <a href="produto.html?id=B011" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Blusa89.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B011</span>
                         <h3><a href="produto.html?id=B011" class="product-card-link">Blusa Linho Bordada</a></h3>
                         <p class="product-price">R$ 89,90</p>
                         <p class="product-installments">em até 3x de R$ 29,97</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B011" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas" data-color-names="cinza branco bege verde preto laranja">
-                    <a href="produto.html?id=B012" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Blusa49.jpg');"></div></a>
+                    <a href="produto.html?id=B012" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Blusa49.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B012</span>
                         <h3><a href="produto.html?id=B012" class="product-card-link">Blusa Canelada Regata</a></h3>
                         <p class="product-price">R$ 49,90</p>
                         <p class="product-installments">em até 3x de R$ 16,63</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B012" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas manga-longa" data-color-names="branco verde vermelho laranja">
-                    <a href="produto.html?id=B013" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/BlusaMangaLonga.jpg');"></div></a>
+                    <a href="produto.html?id=B013" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/BlusaMangaLonga.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B013</span>
                         <h3><a href="produto.html?id=B013" class="product-card-link">Blusa Manga Longa Laço</a></h3>
                         <p class="product-price">R$ 89,90</p>
                         <p class="product-installments">em até 3x de R$ 29,97</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B013" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas" data-color-names="branco preto verde rosa">
-                    <a href="produto.html?id=B014" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/BlusaMangaCurta.jpg');"></div></a>
+                    <a href="produto.html?id=B014" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/BlusaMangaCurta.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B014</span>
                         <h3><a href="produto.html?id=B014" class="product-card-link">Blusa Manga Curta Laço</a></h3>
-                        <p class="product-price">R$ 89,90</p>
-                        <p class="product-installments">em até 3x de R$ 29,97</p>
+                        <p class="product-price">R$ 55,00</p>
+                        <p class="product-installments">em até 3x de R$ 18,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B014" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="blusas" data-color-names="branco preto bege verde azul marrom">
-                    <a href="produto.html?id=B015" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Blusa9.jpg');"></div></a>
+                    <a href="produto.html?id=B015" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Blusa9.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód B015</span>
                         <h3><a href="produto.html?id=B015" class="product-card-link">Blusa Viscose Linho Bordada</a></h3>
                         <p class="product-price">R$ 99,00</p>
                         <p class="product-installments">em até 3x de R$ 33,00</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=B015" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="product-card" data-category="destaques vestidos" data-color-names="rosa">
-                    <a href="produto.html?id=V001" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Vestido1.jpg');"></div></a>
+                    <a href="produto.html?id=V001" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Vestido1.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V001</span>
                         <h3><a href="produto.html?id=V001" class="product-card-link">Vestido Bordado Borboletas</a></h3>
                         <p class="product-price">R$ 245,00</p>
                         <p class="product-installments">em até 3x de R$ 81,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V001" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos" data-color-names="vermelho">
-                    <a href="produto.html?id=V002" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Vestido2.jpg');"></div></a>
+                    <a href="produto.html?id=V002" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Vestido2.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V002</span>
                         <h3><a href="produto.html?id=V002" class="product-card-link">Vestido Estampado Vermelho</a></h3>
                         <p class="product-price">R$ 245,00</p>
                         <p class="product-installments">em até 3x de R$ 81,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V002" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos" data-color-names="azul">
-                    <a href="produto.html?id=V003" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Vestido3.jpg');"></div></a>
+                    <a href="produto.html?id=V003" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Vestido3.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V003</span>
                         <h3><a href="produto.html?id=V003" class="product-card-link">Vestido Laise Azul</a></h3>
                         <p class="product-price">R$ 265,00</p>
                         <p class="product-installments">em até 3x de R$ 88,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V003" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos" data-color-names="vermelho">
-                    <a href="produto.html?id=V004" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Vestido4.jpg');"></div></a>
+                    <a href="produto.html?id=V004" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Vestido4.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V004</span>
                         <h3><a href="produto.html?id=V004" class="product-card-link">Vestido Estampado Vermelho</a></h3>
                         <p class="product-price">R$ 265,00</p>
                         <p class="product-installments">em até 3x de R$ 88,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V004" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos" data-color-names="laranja">
-                    <a href="produto.html?id=V005" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Vestido5.jpg');"></div></a>
+                    <a href="produto.html?id=V005" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Vestido5.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V005</span>
                         <h3><a href="produto.html?id=V005" class="product-card-link">Vestido Bordado Laranja</a></h3>
                         <p class="product-price">R$ 245,00</p>
                         <p class="product-installments">em até 3x de R$ 81,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V005" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos" data-color-names="azul">
-                    <a href="produto.html?id=V006" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Vestido6.jpg');"></div></a>
+                    <a href="produto.html?id=V006" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Vestido6.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V006</span>
                         <h3><a href="produto.html?id=V006" class="product-card-link">Vestido Bordado Marinho</a></h3>
                         <p class="product-price">R$ 245,00</p>
                         <p class="product-installments">em até 3x de R$ 81,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V006" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos" data-color-names="marrom">
-                    <a href="produto.html?id=V007" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/vestido7.jpg');"></div></a>
+                    <a href="produto.html?id=V007" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/vestido7.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V007</span>
                         <h3><a href="produto.html?id=V007" class="product-card-link">Vestido Bordado Marrom</a></h3>
                         <p class="product-price">R$ 235,00</p>
                         <p class="product-installments">em até 3x de R$ 78,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V007" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos plus" data-color-names="rosa">
-                    <a href="produto.html?id=V008" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/vestido8.jpg');"></div></a>
+                    <a href="produto.html?id=V008" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/vestido8.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V008</span>
                         <h3><a href="produto.html?id=V008" class="product-card-link">Vestido Bordado Rosa Plus</a></h3>
                         <p class="product-price">R$ 235,00</p>
                         <p class="product-installments">em até 3x de R$ 78,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V008" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos plus" data-color-names="azul">
-                    <a href="produto.html?id=V009" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/vestido9.jpg');"></div></a>
+                    <a href="produto.html?id=V009" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/vestido9.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V009</span>
                         <h3><a href="produto.html?id=V009" class="product-card-link">Vestido Bordado Azul Plus</a></h3>
                         <p class="product-price">R$ 235,00</p>
                         <p class="product-installments">em até 3x de R$ 78,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V009" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos plus" data-color-names="branco">
-                    <a href="produto.html?id=V010" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/vestido10.jpg');"></div></a>
+                    <a href="produto.html?id=V010" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/vestido10.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V010</span>
                         <h3><a href="produto.html?id=V010" class="product-card-link">Vestido Bordado Branco Plus</a></h3>
                         <p class="product-price">R$ 235,00</p>
                         <p class="product-installments">em até 3x de R$ 78,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V010" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos plus" data-color-names="bege">
-                    <a href="produto.html?id=V011" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/vestido11.jpg');"></div></a>
+                    <a href="produto.html?id=V011" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/vestido11.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V011</span>
                         <h3><a href="produto.html?id=V011" class="product-card-link">Vestido Bordado Bege Plus</a></h3>
                         <p class="product-price">R$ 235,00</p>
                         <p class="product-installments">em até 3x de R$ 78,33</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V011" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
                 <div class="product-card" data-category="destaques vestidos" data-color-names="preto azul verde rosa amarelo branco">
-                    <a href="produto.html?id=V012" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Vestido189.jpg');"></div></a>
+                    <a href="produto.html?id=V012" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Vestido189.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V012</span>
                         <h3><a href="produto.html?id=V012" class="product-card-link">Vestido Longo com Viés</a></h3>
                         <p class="product-price">R$ 189,90</p>
                         <p class="product-installments">em até 3x de R$ 63,30</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V012" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos plus" data-color-names="verde">
-                    <a href="produto.html?id=V013" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/VestidoPlus195.jpg');"></div></a>
+                    <a href="produto.html?id=V013" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/VestidoPlus195.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V013</span>
                         <h3><a href="produto.html?id=V013" class="product-card-link">Vestido Midi Plus Botões</a></h3>
                         <p class="product-price">R$ 195,00</p>
                         <p class="product-installments">em até 3x de R$ 65,00</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V013" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos" data-color-names="vermelho">
-                    <a href="produto.html?id=V014" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/VestidoVermelho.jpg');"></div></a>
+                    <a href="produto.html?id=V014" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/VestidoVermelho.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V014</span>
                         <h3><a href="produto.html?id=V014" class="product-card-link">Vestido Longo Vermelho com Fenda</a></h3>
                         <p class="product-price">R$ 210,00</p>
                         <p class="product-installments">em até 3x de R$ 70,00</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V014" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="vestidos" data-color-names="verde bege azul preto amarelo rosa">
-                    <a href="produto.html?id=V015" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Vestidos.jpg');"></div></a>
+                    <a href="produto.html?id=V015" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Vestidos.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód V015</span>
                         <h3><a href="produto.html?id=V015" class="product-card-link">Vestido Linho Manga Curta</a></h3>
                         <p class="product-price">R$ 199,90</p>
                         <p class="product-installments">em até 3x de R$ 66,63</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=V015" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="camisetas" data-color-names="branco">
-                    <a href="produto.html?id=T001" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/CamisaA1.png');"></div></a>
+                    <a href="produto.html?id=T001" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/CamisaA1.png');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód T001</span>
                         <h3><a href="produto.html?id=T001" class="product-card-link">Camiseta Sorria Vigiado</a></h3>
                         <p class="product-price">R$ 65,00</p>
                         <p class="product-installments">em até 3x de R$ 21,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=T001" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="destaques camisetas" data-color-names="branco">
-                    <a href="produto.html?id=T002" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/CamisaB2.png');"></div></a>
+                    <a href="produto.html?id=T002" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/CamisaB2.png');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód T002</span>
                         <h3><a href="produto.html?id=T002" class="product-card-link">Camiseta Meu Alvo é Cristo</a></h3>
                         <p class="product-price">R$ 65,00</p>
                         <p class="product-installments">em até 3x de R$ 21,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=T002" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="camisetas" data-color-names="branco">
-                    <a href="produto.html?id=T003" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/CamisaC2.png');"></div></a>
+                    <a href="produto.html?id=T003" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/CamisaC2.png');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód T003</span>
                         <h3><a href="produto.html?id=T003" class="product-card-link">Camiseta Deus é Bom Demais</a></h3>
                         <p class="product-price">R$ 65,00</p>
                         <p class="product-installments">em até 3x de R$ 21,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=T003" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="camisetas" data-color-names="branco">
-                    <a href="produto.html?id=T004" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/CamisaD1.png');"></div></a>
+                    <a href="produto.html?id=T004" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/CamisaD1.png');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód T004</span>
                         <h3><a href="produto.html?id=T004" class="product-card-link">Camiseta Sagrado Coração</a></h3>
                         <p class="product-price">R$ 65,00</p>
                         <p class="product-installments">em até 3x de R$ 21,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=T004" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="camisetas" data-color-names="branco">
-                    <a href="produto.html?id=T005" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/CamisaE1.png');"></div></a>
+                    <a href="produto.html?id=T005" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/CamisaE1.png');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód T005</span>
                         <h3><a href="produto.html?id=T005" class="product-card-link">Camiseta Espírito Santo</a></h3>
                         <p class="product-price">R$ 65,00</p>
                         <p class="product-installments">em até 3x de R$ 21,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=T005" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="camisetas" data-color-names="branco">
-                    <a href="produto.html?id=T006" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/CamisaF2.png');"></div></a>
+                    <a href="produto.html?id=T006" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/CamisaF2.png');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód T006</span>
                         <h3><a href="produto.html?id=T006" class="product-card-link">Camiseta Não Reclame, Clame, Ame</a></h3>
                         <p class="product-price">R$ 65,00</p>
                         <p class="product-installments">em até 3x de R$ 21,67</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=T006" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="product-card" data-category="calcas plus" data-color-names="preto rosa azul marrom bege vermelho laranja">
-                    <a href="produto.html?id=C001" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Calças1.jpg');"></div></a>
+                    <a href="produto.html?id=C001" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Calças1.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód C001</span>
                         <h3><a href="produto.html?id=C001" class="product-card-link">Calça Alfaiataria Plus Size</a></h3>
                         <p class="product-price">R$ 119,90</p>
                         <p class="product-installments">em até 3x de R$ 39,97</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=C001" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="destaques calcas plus" data-color-names="preto bege laranja verde rosa marrom cinza">
-                    <a href="produto.html?id=C002" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Calças3.jpg');"></div></a>
+                    <a href="produto.html?id=C002" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Calças3.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód C002</span>
                         <h3><a href="produto.html?id=C002" class="product-card-link">Calça Sarja Plus Size com Cinto</a></h3>
                         <p class="product-price">R$ 129,90</p>
                         <p class="product-installments">em até 3x de R$ 43,30</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=C002" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="calcas" data-color-names="preto verde bege marrom azul laranja cinza">
-                    <a href="produto.html?id=C003" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/Calças6.jpg');"></div></a>
+                    <a href="produto.html?id=C003" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/Calças6.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód C003</span>
                         <h3><a href="produto.html?id=C003" class="product-card-link">Calça Sarja com Cinto Elástico</a></h3>
                         <p class="product-price">R$ 99,90</p>
                         <p class="product-installments">em até 3x de R$ 33,30</p>
+                        <div class="product-card-footer">
+                            <a href="produto.html?id=C003" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="product-card" data-category="fardamentos" data-color-names="verde">
-                    <a href="produto.html?id=F001" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/fardamento1.jpg');"></div></a>
+                    <a href="produto.html?id=F001" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/fardamento1.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód F001</span>
                         <h3><a href="produto.html?id=F001" class="product-card-link">Fardamento Renda Verde</a></h3>
                         <p class="product-price">Sob Orçamento</p>
                         <p class="product-installments">Peça uma cotação</p>
                         <div class="product-card-footer">
-                            <div class="product-sizes"><span class="size-option">Sob Medida</span></div>
+                            <a href="produto.html?id=F001" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="fardamentos" data-color-names="rosa">
-                    <a href="produto.html?id=F002" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/fardamento2.jpg');"></div></a>
+                    <a href="produto.html?id=F002" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/fardamento2.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód F002</span>
                         <h3><a href="produto.html?id=F002" class="product-card-link">Fardamento Tule Pink</a></h3>
                         <p class="product-price">Sob Orçamento</p>
                         <p class="product-installments">Peça uma cotação</p>
                         <div class="product-card-footer">
-                            <div class="product-sizes"><span class="size-option">Sob Medida</span></div>
+                            <a href="produto.html?id=F002" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="fardamentos" data-color-names="branco">
-                    <a href="produto.html?id=F003" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/fardamento3.jpg');"></div></a>
+                    <a href="produto.html?id=F003" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/fardamento3.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód F003</span>
                         <h3><a href="produto.html?id=F003" class="product-card-link">Fardamento Notas Musicais</a></h3>
                         <p class="product-price">Sob Orçamento</p>
                         <p class="product-installments">Peça uma cotação</p>
                         <div class="product-card-footer">
-                            <div class="product-sizes"><span class="size-option">Sob Medida</span></div>
+                            <a href="produto.html?id=F003" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="fardamentos" data-color-names="rosa">
-                    <a href="produto.html?id=F004" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/fardamento4.jpg');"></div></a>
+                    <a href="produto.html?id=F004" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/fardamento4.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód F004</span>
                         <h3><a href="produto.html?id=F004" class="product-card-link">Fardamento Floral Rosa</a></h3>
                         <p class="product-price">Sob Orçamento</p>
                         <p class="product-installments">Peça uma cotação</p>
                         <div class="product-card-footer">
-                            <div class="product-sizes"><span class="size-option">Sob Medida</span></div>
+                            <a href="produto.html?id=F004" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="fardamentos" data-color-names="bege">
-                    <a href="produto.html?id=F005" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/fardamento5.jpg');"></div></a>
+                    <a href="produto.html?id=F005" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/fardamento5.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód F005</span>
                         <h3><a href="produto.html?id=F005" class="product-card-link">Fardamento Floral Bege</a></h3>
                         <p class="product-price">Sob Orçamento</p>
                         <p class="product-installments">Peça uma cotação</p>
                         <div class="product-card-footer">
-                            <div class="product-sizes"><span class="size-option">Sob Medida</span></div>
+                            <a href="produto.html?id=F005" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="fardamentos" data-color-names="vermelho">
-                    <a href="produto.html?id=F006" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/fardamento6.jpg');"></div></a>
+                    <a href="produto.html?id=F006" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/fardamento6.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód F006</span>
                         <h3><a href="produto.html?id=F006" class="product-card-link">Fardamento Longo Vinho</a></h3>
                         <p class="product-price">Sob Orçamento</p>
                         <p class="product-installments">Peça uma cotação</p>
                         <div class="product-card-footer">
-                            <div class="product-sizes"><span class="size-option">Sob Medida</span></div>
+                            <a href="produto.html?id=F006" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="fardamentos" data-color-names="rosa">
-                    <a href="produto.html?id=F007" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/fardamento7.jpg');"></div></a>
+                    <a href="produto.html?id=F007" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/fardamento7.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód F007</span>
                         <h3><a href="produto.html?id=F007" class="product-card-link">Fardamento Salmão</a></h3>
                         <p class="product-price">Sob Orçamento</p>
                         <p class="product-installments">Peça uma cotação</p>
                         <div class="product-card-footer">
-                            <div class="product-sizes"><span class="size-option">Sob Medida</span></div>
+                            <a href="produto.html?id=F007" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="fardamentos" data-color-names="verde preto">
-                    <a href="produto.html?id=F008" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/fardamento8.jpg');"></div></a>
+                    <a href="produto.html?id=F008" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/fardamento8.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód F008</span>
                         <h3><a href="produto.html?id=F008" class="product-card-link">Fardamento Saia Plissada</a></h3>
                         <p class="product-price">Sob Orçamento</p>
                         <p class="product-installments">Peça uma cotação</p>
                         <div class="product-card-footer">
-                            <div class="product-sizes"><span class="size-option">Sob Medida</span></div>
+                            <a href="produto.html?id=F008" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="fardamentos" data-color-names="verde">
-                    <a href="produto.html?id=F009" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/fardamento9.jpg');"></div></a>
+                    <a href="produto.html?id=F009" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/fardamento9.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód F009</span>
                         <h3><a href="produto.html?id=F009" class="product-card-link">Fardamento Verde Musgo</a></h3>
                         <p class="product-price">Sob Orçamento</p>
                         <p class="product-installments">Peça uma cotação</p>
                         <div class="product-card-footer">
-                            <div class="product-sizes"><span class="size-option">Sob Medida</span></div>
+                            <a href="produto.html?id=F009" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-card" data-category="fardamentos" data-color-names="preto">
-                    <a href="produto.html?id=F010" class="product-card-link"><div class="product-image-placeholder" style="background-image: url('Fotos/fardamento10.jpg');"></div></a>
+                    <a href="produto.html?id=F010" class="product-card-link">
+                        <div class="product-image-placeholder" style="background-image: url('Fotos/fardamento10.jpg');"></div>
+                    </a>
                     <div class="product-card-content">
                         <span class="product-card-label">Cód F010</span>
                         <h3><a href="produto.html?id=F010" class="product-card-link">Fardamento Preto e Branco</a></h3>
                         <p class="product-price">Sob Orçamento</p>
                         <p class="product-installments">Peça uma cotação</p>
                         <div class="product-card-footer">
-                            <div class="product-sizes"><span class="size-option">Sob Medida</span></div>
+                            <a href="produto.html?id=F010" class="card-action-button">
+                                <span>Adicionar à Sacola</span>
+                                <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -747,7 +1200,7 @@
         </section>
     </main>
 
-    
+
     <nav class="mobile-dock" id="mobile-dock">
         <div class="dock-panel" id="dock-panel">
             <a href="index.html" class="dock-item" data-label="Início">
@@ -762,13 +1215,28 @@
                 <span class="dock-icon"><i class="fas fa-store"></i></span>
                 <span class="dock-label">Loja</span>
             </a>
-            <a href="index.html#contato" class="dock-item" data-label="Contato">
-                <span class="dock-icon"><i class="fas fa-user"></i></span>
-                <span class="dock-label">Contato</span>
+            <a href="index.html#categorias" class="dock-item" data-label="Categorias">
+                <span class="dock-icon"><i class="fas fa-th-large"></i></span>
+                <span class="dock-label">Categorias</span>
             </a>
         </div>
     </nav>
 
+    <div class="bag-overlay" id="bag-overlay"></div>
+    <aside class="bag-sidebar" id="bag-sidebar">
+        <div class="bag-header">
+            <h3>Sua Sacola</h3>
+            <button class="bag-close-btn" id="bag-close-btn">&times;</button>
+        </div>
+        <div class="bag-content" id="bag-items-container">
+            <p class="bag-empty-message">Sua sacola está vazia.</p>
+        </div>
+        <div class="bag-footer">
+            <a href="#" class="pdp-whatsapp-button" id="bag-checkout-whatsapp" style="display: none;">
+                <i class="fab fa-whatsapp"></i> Finalizar Pedido
+            </a>
+        </div>
+    </aside>
     <div class="floating-social">
         <a href="https://chat.whatsapp.com/BS9jxBn1V2eIzFxjMFlxXG?fbclid=PAZXh0bgNhZW0CMTEAAadpgJFJx9NshdqBFCB9NrVhL5M68yZynr7unGsOEl4Qdg7ms3brQYLnPpvg5Q_aem_YoHqPQW_SD-3Awi7FhzB1Q" target="_blank" class="social-icon whatsapp">
             <i class="fab fa-whatsapp"></i>
@@ -782,7 +1250,9 @@
         <p>&copy; 2025 Crismon Modas. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="bag-script.js"></script>
     <script src="loja-script.js"></script>
 
 </body>
+
 </html>
