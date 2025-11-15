@@ -1859,10 +1859,10 @@ a.product-card-link {
     }
 }
 /* ============================================== */
-/* ==== 20. BOTÃO "LIQUID GLASS" NO CARD (ATUALIZADO) ==== */
+/* ==== 20. BOTÃO DE OPÇÕES NO CARD (NOVO ESTILO CLEAN) ==== */
 /* ============================================== */
 
-/* 1. Remove os tamanhos e cores falsos (se ainda existirem) */
+/* 1. Remove os tamanhos e cores falsos dos cards */
 #loja .product-sizes,
 #loja .product-colors,
 #colecao .product-sizes,
@@ -1883,44 +1883,41 @@ a.product-card-link {
     padding-top: 1rem; 
 }
 
-/* 4. O estilo do novo botão "Liquid Glass" (Versão Dark) */
-.card-action-button {
-    /* Layout Flex para alinhar texto e ícone */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem; /* Espaço entre o texto e o ícone */
-    
-    padding: 0.75rem 1rem; /* Tamanho do botão */
-    text-decoration: none;
+/* 4. O estilo do novo botão "Clean" (Substitua o .card-add-button antigo por este) */
+.card-add-button {
+    display: block; /* Garante que o link ocupe a largura */
     text-align: center;
+    text-decoration: none;
     
-    /* Estilo "Glass" (Inspirado no seu exemplo) */
-    background: rgba(34, 34, 34, 0.85); /* Fundo escuro, levemente transparente */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 50px; /* Bem arredondado */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil clara */
+    /* Estilo "Clean" (inspirado nos filtros) */
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border); /* Borda padrão do site */
+    color: var(--color-text-light); /* Texto cinza claro */
     
-    /* Sombra */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-    
-    /* Texto */
-    color: #ffffff; /* Texto branco */
+    /* Tamanho e Fonte */
+    font-family: var(--font-family);
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500; /* Mais leve que 600 */
+    padding: 0.7rem 1rem;
+    border-radius: 50px; /* Totalmente arredondado */
+    
+    /* Remove o "glassmorphism" antigo */
+    backdrop-filter: none; 
+    box-shadow: none; /* Remove a sombra */
     
     /* Transição */
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.2s ease-in-out;
 }
 
-.card-action-button:hover {
-    background: rgba(10, 10, 10, 0.9); /* Mais escuro no hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.03); /* Efeito de "pular" */
-    color: #ffffff;
+.card-add-button:hover {
+    background-color: var(--color-beige); /* Fundo bege no hover */
+    border-color: #ddd; /* Borda um pouco mais escura */
+    color: var(--color-text-dark); /* Texto escuro no hover */
+    transform: scale(1.02); /* Leve zoom */
+    box-shadow: none; /* Garante que não tenha sombra no hover */
 }
 
-.card-action-button i {
-    font-size: 0.8rem; /* Tamanho do ícone "+" */
+/* 5. Esconde o ícone '+' que não é mais necessário */
+.card-add-button i {
+    display: none;
 }
