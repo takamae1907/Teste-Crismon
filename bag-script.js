@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // --- Variáveis Globais ---
     // Coloque aqui o número de WhatsApp da dona da loja, em formato internacional (Ex: 55119XXXXXXXX)
-    const NUMERO_WHATSAPP_DONA = "5561995519612"; 
+    const NUMERO_WHATSAPP_DONA = "5561994134559"; 
     
     const bagIcon = document.getElementById("bag-icon-button");
     const bagSidebar = document.getElementById("bag-sidebar");
