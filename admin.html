@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Crismon Modas</title>
+    <link rel="stylesheet" href="style.css"> <style>
+        /* Estilos específicos para o Admin */
+        body { padding-top: 20px; background-color: #f4f4f4; }
+        .admin-container { max-width: 800px; margin: 0 auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        
+        .product-list-item { display: flex; align-items: center; gap: 15px; padding: 15px; border-bottom: 1px solid #eee; }
+        .product-list-item img { width: 60px; height: 60px; object-fit: cover; border-radius: 5px; }
+        .product-info { flex-grow: 1; }
+        
+        .btn-danger { background-color: #ff4444; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; }
+        .btn-primary { background-color: #222; color: white; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px; }
+        
+        #login-screen { text-align: center; max-width: 400px; margin: 100px auto; }
+    </style>
+</head>
+<body>
+
+    <div id="login-screen">
+        <img src="Fotos/logo-removebg-preview.png" alt="Logo" width="100">
+        <h2>Área Restrita</h2>
+        <div class="form-group">
+            <input type="email" id="email-login" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+            <input type="password" id="senha-login" placeholder="Senha">
+        </div>
+        <button id="btn-login" class="btn-primary">Entrar</button>
+    </div>
+
+    <div id="admin-panel" class="admin-container" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2>Gerenciar Produtos</h2>
+            <button id="btn-logout" class="btn-danger">Sair</button>
+        </div>
+
+        <div style="background: #faf7f2; padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+            <h3>Novo Produto</h3>
+            <div class="form-group">
+                <label>Nome da Peça:</label>
+                <input type="text" id="prod-nome" placeholder="Ex: Vestido Longo Floral">
+            </div>
+            <div class="form-group" style="display: flex; gap: 10px;">
+                <div style="flex: 1;">
+                    <label>Preço (R$):</label>
+                    <input type="text" id="prod-preco" placeholder="Ex: R$ 199,90">
+                </div>
+                <div style="flex: 1;">
+                    <label>Parcelas:</label>
+                    <input type="text" id="prod-parcelas" placeholder="Ex: 3x de R$ 66,63">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Categoria (para o filtro):</label>
+                <select id="prod-categoria">
+                    <option value="vestidos">Vestidos</option>
+                    <option value="saias">Saias</option>
+                    <option value="blusas">Blusas</option>
+                    <option value="calcas">Calças</option>
+                    <option value="camisetas">Camisetas</option>
+                    <option value="fardamentos">Fardamentos</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Tamanhos (separados por vírgula):</label>
+                <input type="text" id="prod-tamanhos" placeholder="Ex: P, M, G">
+            </div>
+            <div class="form-group">
+                <label>Cores (Nomes separados por vírgula):</label>
+                <input type="text" id="prod-cores" placeholder="Ex: Azul, Rosa, Preto">
+            </div>
+            <div class="form-group">
+                <label>Foto Principal:</label>
+                <input type="file" id="prod-foto" accept="image/*">
+            </div>
+            <button id="btn-salvar" class="btn-primary">Salvar Produto</button>
+        </div>
+
+        <h3>Produtos Cadastrados</h3>
+        <div id="lista-produtos">
+            <p>Carregando produtos...</p>
+        </div>
+    </div>
+
+    <script type="module" src="admin-script.js"></script>
+</body>
+</html>
